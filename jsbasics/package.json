@@ -1,0 +1,17 @@
+{
+  "name": "jsbasics",
+  "version": "1.0.0",
+  "description": "this is a basics folder",
+  "keywords": [
+    "basics",
+    "js",
+    "ts"
+  ],
+  "license": "ISC",
+  "author": "Nischal",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
