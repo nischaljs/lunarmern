@@ -45,3 +45,17 @@ options   // preflight  CORS
 
 -> create models 
 
+
+
+
+CRUD - create read update and delete 
+
+1
+client (frotnend / postman)   ---------middleware------routes-------controller--- back to client
+
+2. authentication 
+
+-> session based auth
+-> token based authentication 
+
+

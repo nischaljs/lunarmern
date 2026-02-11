@@ -1,0 +1,20 @@
+meta {
+  name: get me
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://localhost:4000/me
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OGFjZmZmNjhmMTZiYTAxNGZhZWFlYyIsIm5hbWUiOiJyYW0gIiwiaWF0IjoxNzcwNzA0ODk1fQ.Yj63kjpMdntFdWKukk4kwGmaVlgrUVfHthi9Up7v4N4
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

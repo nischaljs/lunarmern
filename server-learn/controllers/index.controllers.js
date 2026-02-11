@@ -38,11 +38,12 @@ const AllControllers = {
             })
         }
     },
-    DELETEUSER: (req, res) => {
+    DELETEUSER: async (req, res) => {
         try {
             console.log("delete request received");
-            console.log(req.body);
+            console.log(req.body._id);
             // database delete 
+            await Student.findByIdAndDelete(req.body._id);
             res.status(200).json({
                 "success": true,
                 "message": "data deleted successfully"
