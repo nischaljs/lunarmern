@@ -1,0 +1,13 @@
+->  created main folder
+-> created backend and frotnend within that folder
+-> cd into backend 
+        -> npm init -y
+        -> create a script to run the server in HMR     "dev":"node --watch index.js"
+        -> type module 
+        -> install required packages express jsonwebtoken mongoose bcryptjs  dotenv
+        -> create a basic express server
+-> cd frontend
+        -> pnpm create vite@latest
+        -> pnpm install tailwindcss @tailwindcss/vite
+        -> follow the tailwind docs in website to add taiwindcss as a plugin
+        
