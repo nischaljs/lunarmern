@@ -1,15 +1,19 @@
 import express from "express";
 import dotenv from "dotenv";
+import Productrouter from "./routes/product.routes.js";
+import connectDB from "./utils/dbconnect.js";
 
 
 dotenv.config();
-
-
 const app = express();
+connectDB();
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+
+app.use(express.json());
+
+
+
+app.use(Productrouter);
 
 const PORT = process.env.PORT;
 

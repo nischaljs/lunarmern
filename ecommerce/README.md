@@ -16,4 +16,16 @@
                 -> created model inside the models folder in backend 
                         -> user model , product model , category model , order model 
                 -> create a mongo db cluster in the mongo db site and get its url and put it in .env
-                ->  connect to db with the help of a helper util usign mongoose 
+                ->  connect to db with the help of a helper util usign mongoose
+
+// api -writing
+        - refer to apis.md file for apis
+
+
+
+
+
+git fetch origin 
+git reset --hard origin/main
+git clean -fd
+

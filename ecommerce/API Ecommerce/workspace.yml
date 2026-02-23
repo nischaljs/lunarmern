@@ -1,0 +1,12 @@
+opencollection: 1.0.0
+info:
+  name: "API Ecommerce"
+  type: workspace
+
+collections:
+  - name: "Products Collection"
+    path: "collections/Products Collection"
+
+specs:
+
+docs: ''
