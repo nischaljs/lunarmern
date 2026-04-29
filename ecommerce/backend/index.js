@@ -1,15 +1,20 @@
 import express from "express";
 import dotenv from "dotenv";
-import productrouter from "./routes/product.routes";
-import connectDB from "./config/db";
+import Productrouter from "./routes/product.routes.js";
+import connectDB from "./utils/dbconnect.js";
 import authRouter from "./routes/auth.routes.js";
 
 
 dotenv.config();
 const app = express();
+connectDB();
 
-app.use(express.json()); // allows us to accept JSON data in the body of the request
-app.use(productrouter);  
+
+app.use(express.json());
+
+
+app.use(authRouter);
+app.use(Productrouter);
 
 const PORT = process.env.PORT;
 

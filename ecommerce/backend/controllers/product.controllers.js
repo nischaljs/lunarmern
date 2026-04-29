@@ -1,21 +1,33 @@
-const productController = {
-    getProducts: async (req, res) => {
+import Product from "../models/product.model.js";
+
+
+const ProductController = {
+
+    getAllProducts: async (req, res) => {
         try {
-            const products = await Product.find({});
+            // Logic to fetch all products from the database
+            const products = await Product.find();
             res.status(200).json(products);
         } catch (error) {
-            res.status(500).json({ message: error.message });
+            console.log(error);
+            res.status(500).json({ message: 'Error fetching products', error });
         }
     },
-
-    getProduct: async (req, res) => {
+    
+    getProductById: async (req, res) => {
         try {
-            const product = await Product.findById(req.params.id);
+            const id= req.params.id;
+            // Logic to fetch a single product by ID from the database
+            const product = await Product.findById(id);
+            if (!product) {
+                return res.status(404).json({ message: 'Product not found' });
+            }
             res.status(200).json(product);
         } catch (error) {
-            res.status(500).json({ message: error.message });
+            res.status(500).json({ message: 'Error fetching product', error });
         }
     }
-};
 
-export default productController;
+}
+
+export default ProductController;

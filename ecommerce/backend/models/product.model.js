@@ -1,41 +1,45 @@
-import mongoode from "mongoose";
+import mongoose from "mongoose";
 
-const productSchema = new mongoode.Schema({
-    name: {
-        type: String,
-        required: true,
+
+const productSchema = new mongoose.Schema({
+    name:{
+        type:String,
+        required:true
     },
-    Saleprice: {
-        type: Number,
-        required: true,
+    description:{
+        type:String,
+        required:true
     },
-    description: {
-        type: String,
-        required: true,
+    Saleprice:{
+        type:Number,
+        required:true
     },
-    image: {
-        type: String,
-        required: true,
+    discount:{
+        type:Number,
+        default:0
     },
-    discount: {
-        type: Number,
-        required: true,
+    variant:{
+        type:[String],
+        required:true
     },
-    variant: {
-        type: String,
-        required: true,
+    featuredimagePath:{
+        type:String,
+        required:true
     },
-    featureimagepath: {
-        type: String,
-        required: true,
+    imagesPath:{
+        type:[String]
     },
-    featureproduct: {
-      type: Boolean,
-      default: false
+    category:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Category",
+        required:true
+    },
+    isfeaturedProduct:{
+        type:Boolean,
+        default:false
     }
-  },
-  { timestamps: true }   // ✅ correct place
-);
-const Product = mongoode.model("Product", productSchema);
+},{ timestamps: true });
+
+const Product = mongoose.model("Product", productSchema);
 
 export default Product;

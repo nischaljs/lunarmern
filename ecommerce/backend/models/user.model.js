@@ -1,29 +1,29 @@
-import mongoode from "mongoose";
+import mongoose from "mongoose";
 
-const userSchema=new mongoode.Schema({
-    username:{
+
+const userSchema = new mongoose.Schema({
+    name:{
         type:String,
-        required:true,
+        required:true
     },
     email:{
         type:String,
         required:true,
-        unique:true,
+        unique:true
     },
     password:{
         type:String,
-        required:true,
+        required:true
     },
-        role:{
+    role:{
         type:String,
-        required:true,
-        enum:['admin','user'],
-        default:'user',
-    },
-},
-{timestamps:true}
-);
+        enum:["ADMIN","CUSTOMER"],
+        default:"CUSTOMER"
+    }
 
-const User=mongoode.model('User',userSchema);
+}, { timestamps: true });
+
+
+const User = mongoose.model("User", userSchema);
 
 export default User;
