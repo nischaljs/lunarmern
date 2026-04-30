@@ -11,6 +11,12 @@ Productrouter.get("/products",ProductController.getAllProducts);
 //get single product by id 
 Productrouter.get("/products/:id",ProductController.getProductById);
 
+
+Productrouter.get("/products/featured",ProductController.getFeaturedProducts);
+
+Productrouter.get("/products/search", ProductController.searchProducts);
+
+Productrouter.get("/products/category/:category", ProductController.getProductsByCategory);
 //admin routes
 // router.post("/products",);
 // router.put("/products/:id",);
@@ -18,3 +24,6 @@ Productrouter.get("/products/:id",ProductController.getProductById);
 
 
 export default Productrouter;
+
+
+
