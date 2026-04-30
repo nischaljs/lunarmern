@@ -11,10 +11,17 @@ Productrouter.get("/products",ProductController.getAllProducts);
 //get single product by id 
 Productrouter.get("/products/:id",ProductController.getProductById);
 
-//admin routes
-// router.post("/products",);
-// router.put("/products/:id",);
-// router.delete("/products/:id",);
+
+Productrouter.get("/products/featured", ProductController.getFeaturedProducts);
+
+Productrouter.get("/products/search", ProductController.searchProducts);
+
+Productrouter.get("/products/category/:category", ProductController.getProductsByCategory);
 
 
 export default Productrouter;
+
+
+// index.js -> route -> controller ( main db queries ) -> response 
+// request ->indexedDB.js ->route -> controller -> response
+

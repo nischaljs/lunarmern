@@ -14,7 +14,8 @@ Status: ✅ done · ❌ not implemented
 
 | Status | Method | Path                              | Auth | Purpose                                  |
 | ------ | ------ | --------------------------------- | ---- | ---------------------------------------- |
-| ❌     | GET    | `/products/featured`              | 🌐   | Featured products for landing page       |
+| ✅     | GET    | `/products`                       | 🌐   | All products (pagination ❌ not yet)     |
+|      | GET    | `/products/featured`              | 🌐   | Featured products for landing page       |
 | ❌     | GET    | `/categories`                     | 🌐   | All categories (landing + nav)           |
 | ✅     | GET    | `/products`                       | 🌐   | All products (pagination ❌ not yet)     |
 | ❌     | GET    | `/products/search?q=`             | 🌐   | Search by name/description               |
