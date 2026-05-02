@@ -73,7 +73,7 @@ const ProductController = {
             res.status(200).json(productsofThatCategory);
         }
         catch(error){
-            console.log("Error fetching products by category:", error);
+            console.log("get product ma error",error);
             res.status(500).json({ message: "Error fetching products by category" }); 
         }
     }
